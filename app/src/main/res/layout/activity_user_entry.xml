@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".UserEntryActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/merienda"
+            android:padding="@dimen/quiz_title_padding"
+            android:text="@string/quiz"
+            android:textColor="@android:color/black"
+            android:textSize="60sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/quiz_image_padding"
+            android:scaleType="centerInside"
+            android:src="@drawable/quiz_mind" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edit_text_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/user_name_margin_end"
+            android:layout_marginStart="@dimen/user_name_margin_start"
+            android:layout_marginTop="@dimen/user_end_margin_top">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/merienda"
+                android:hint="@string/enter_user_name"
+                android:inputType="textCapWords"
+                android:maxLines="1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/start_Button"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/start_button_marginTop"
+            android:fontFamily="@font/merienda"
+            android:onClick="goToQuiz"
+            android:text="@string/Go_button_name"
+            app:cornerRadius="@dimen/start_button_radius" />
+
+
+    </LinearLayout>
+</ScrollView>

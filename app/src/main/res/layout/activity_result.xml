@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/win_lose_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/result_header_color"
+        android:fontFamily="@font/merienda"
+        android:padding="@dimen/result_header_padding"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_name_in_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/user_name_in_result_margin_top"
+        android:fontFamily="@font/merienda"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="@dimen/expresionCard_height"
+        android:layout_height="@dimen/expresionCard_width"
+        android:layout_below="@id/win_lose_text"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/expresionCard_margin_top"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:foregroundGravity="center"
+        app:cardBackgroundColor="@color/card_color"
+        app:cardCornerRadius="@dimen/expresionCard_radius"
+        app:cardElevation="@dimen/expresionCard_elevation">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/expression_image"
+                android:layout_width="@dimen/emoji_width"
+                android:layout_height="@dimen/emoji_height"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/emoji_margin_top"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+
+        </RelativeLayout>
+    </android.support.design.card.MaterialCardView>
+</RelativeLayout>
